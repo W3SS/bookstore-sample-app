@@ -1,0 +1,22 @@
+<h2 class="text-center header-title">Books</h2>
+    <div class="container">
+        <ul class="book-list">
+            <a *ngFor="let book of books" [routerLink]="['/books/', book.id]">
+                <li id="1" class="book col-l-7 col-s-12" [ngClass]="book.quantity > 0 ? 'book-in-stock' : 'book-out-of-stock'">
+                    <div class="book__header">
+                        <h2>{{book.title}}</h2>
+                        <p>by {{book.author}}</p>
+                    </div>
+                    <div class="icons">
+                        <div>
+                            <p>Price: {{book.price}}$</p>
+                        </div>
+                      <div>
+                        <span *ngIf="book.quantity < 1" class="label label-danger quantity-label">Not available</span>
+                        <span *ngIf="book.quantity > 0" class="label label-success">Available copies: {{book.quantity}}</span>
+                      </div>
+                    </div>
+                </li>
+              </a>
+        </ul>
+      </div>

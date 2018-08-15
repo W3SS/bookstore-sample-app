@@ -1,0 +1,23 @@
+<h2 class="text-center header-title">Book Details</h2>
+<div class="container">
+  <div *ngIf="book != undefined" class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <div style="width: 120px">
+          <i class="fa fa-book" area-hidden="true"></i>
+        </div>
+        <div class="caption">
+          <h3>{{this.book.title}}</h3>
+          <h4>by {{this.book.author}}</h4>
+          <p>Price: {{this.book.price}}$</p>
+          <p>Available quantity: {{this.book.quantity}}</p>
+          <div *ngIf="this.isBookAvailable()">
+            <button *ngIf="this.isLoggedIn()" type="button" class="btn btn-primary" (click)='this.order()'>Order</button>
+            <p *ngIf="!this.isLoggedIn()" class="text-danger">Please sign in to order</p>
+          </div>
+          <p *ngIf="!this.isBookAvailable()" class="text-danger">This book is not available for order</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

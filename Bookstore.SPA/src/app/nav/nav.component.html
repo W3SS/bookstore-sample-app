@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active" >Bookstore</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a [routerLink]="['/books']" routerLinkActive="router-link-active" >Books</a></li>
+      </ul>
+
+      <toaster-container [toasterconfig]="config"></toaster-container>
+
+      <form *ngIf="!loggedIn()" #loginForm="ngForm" class="navbar-form navbar-right" (ngSubmit)="login()">
+        <div class="form-group">
+          <input type="text" placeholder="Username" class="form-control" required name="username" [(ngModel)]="model.username">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" required name="password" [(ngModel)]="model.password">
+        </div>
+        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-success mr-5">Sign in</button>
+        <div class="form-group mx-5">or</div>
+        <button class="btn btn-success" [routerLink]="['/register']" routerLinkActive="router-link-active">Register</button>
+      </form>
+
+      <ul *ngIf="loggedIn()" class="nav navbar-nav navbar-right">
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>

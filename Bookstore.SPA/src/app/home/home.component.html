@@ -1,0 +1,13 @@
+<div style="text-align:center">
+  <h1>
+    Bookstore
+  </h1>
+  <p class="lead">This is a demo Bookstore application for test purposes only.</p>
+  <button *ngIf="loggedIn()" class="btn btn-success btn-lg" [routerLink]="['/books']" routerLinkActive="router-link-active">See our list of books</button>
+  <div *ngIf="!loggedIn()">
+    <p class="lead">Please sign in or register to enable the "order books" functionality!</p>
+    <div class="text-center">
+      <button class="btn btn-success btn-lg" (click)="register()">Register</button>
+    </div>
+  </div>
+</div>

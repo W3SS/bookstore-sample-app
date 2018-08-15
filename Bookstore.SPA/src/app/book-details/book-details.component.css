@@ -1,0 +1,16 @@
+
+  .thumbnail {
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    background: radial-gradient(white 30%, whitesmoke);
+    box-shadow: 2px 2px 2px grey;
+  }
+  .thumbnail i {
+    font-size: 80px;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  .thumbnail h3 {
+    font-weight: bold;
+  }
+  

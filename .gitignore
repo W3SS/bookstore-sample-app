@@ -1,0 +1,5 @@
+Bookstore.API/bin/
+Bookstore.API/obj/
+.vs/
+*.user
+.vscode/

@@ -1,0 +1,76 @@
+ 
+  .book-list {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .book-list .book {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Dosis', sans-serif;
+    background: radial-gradient(white 30%, whitesmoke);
+    box-shadow: 2px 2px 2px grey;
+  }
+  .book-list .book h2 {
+    font-weight: bold;
+  }
+  .book-list .book h3 {
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  .book-list .book p {
+    font-family: 'Dosis', sans-serif;
+  }
+  
+  ul {
+    list-style: none;
+    margin: none;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .icons div {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .icons div p {
+    margin: 0;
+  }
+  
+  .icons div .fa {
+    margin-right: 20px;
+  }
+  
+  .icons div span {
+    font-size: 2rem;
+  }
+  
+  .book-in-stock {
+    border-right: 3px solid #2e8b57;
+  }
+  
+  .book-out-of-stock {
+    border-right: 3px solid red;
+  }
+  
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
